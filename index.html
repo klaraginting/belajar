@@ -10,3 +10,291 @@
   <p>Website kelas IPA!</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usaha dan Daya - IPA Kelas 8</title>
+<style>
+:root{
+  --primary:#2563eb; --secondary:#0f766e; --accent:#f59e0b;
+  --bg:#f5f7fb; --card:#ffffff; --text:#172033; --muted:#667085;
+  --dark:#172554; --success:#15803d; --danger:#dc2626;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+header{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#0f766e);color:white;padding:48px 20px}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+header .tag{display:inline-block;background:rgba(255,255,255,.18);padding:7px 13px;border-radius:999px;font-size:.9rem}
+h1{font-size:clamp(2rem,5vw,3.5rem);margin:15px 0 8px}
+header p{max-width:760px;font-size:1.08rem}
+nav{position:sticky;top:0;z-index:5;background:white;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+nav .container{display:flex;gap:8px;overflow:auto;padding-top:10px;padding-bottom:10px}
+nav a{white-space:nowrap;text-decoration:none;color:#334155;font-weight:600;padding:9px 13px;border-radius:9px}
+nav a:hover{background:#eff6ff;color:var(--primary)}
+section{padding:42px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border-radius:18px;padding:24px;box-shadow:0 8px 25px rgba(15,23,42,.07);border:1px solid #e8ebf0}
+.card h3{margin-top:0;color:#1e3a8a}
+.callout{background:#eff6ff;border-left:5px solid var(--primary);padding:18px 20px;border-radius:10px;margin:18px 0}
+.callout.green{background:#ecfdf5;border-left-color:var(--secondary)}
+.callout.yellow{background:#fffbeb;border-left-color:var(--accent)}
+.formula{font-size:1.35rem;font-weight:700;text-align:center;background:#172554;color:white;padding:18px;border-radius:14px;margin:18px 0}
+.example{background:#f8fafc;border:1px dashed #94a3b8;border-radius:14px;padding:18px;margin:15px 0}
+.steps{counter-reset:step;list-style:none;padding:0}
+.steps li{counter-increment:step;margin:13px 0;padding:12px 15px 12px 48px;background:white;border-radius:12px;position:relative;box-shadow:0 3px 12px rgba(15,23,42,.05)}
+.steps li:before{content:counter(step);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--primary);color:white;text-align:center;line-height:28px;font-weight:bold}
+table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden}
+th,td{padding:12px;border:1px solid #e5e7eb;text-align:left}
+th{background:#dbeafe;color:#1e3a8a}
+button{border:0;background:var(--primary);color:white;padding:10px 16px;border-radius:9px;font-weight:700;cursor:pointer}
+button:hover{filter:brightness(.95)}
+.quiz{margin-top:16px}
+.option{display:block;width:100%;text-align:left;background:#f8fafc;color:#172033;border:1px solid #dbe2ea;margin:8px 0}
+.option.correct{background:#dcfce7;border-color:#86efac}
+.option.wrong{background:#fee2e2;border-color:#fca5a5}
+.feedback{font-weight:700;margin-top:10px;min-height:24px}
+input{padding:10px;border:1px solid #cbd5e1;border-radius:8px;width:120px}
+footer{background:#172033;color:#cbd5e1;text-align:center;padding:30px}
+.small{color:var(--muted);font-size:.92rem}
+.badge{display:inline-block;background:#dbeafe;color:#1e40af;padding:5px 9px;border-radius:999px;font-size:.82rem;font-weight:700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+<header>
+<div class="container">
+<span class="tag">IPA Kelas 8 SMP • Materi Interaktif</span>
+<h1>Usaha dan Daya</h1>
+<p>Memahami hubungan antara gaya, perpindahan, usaha, waktu, dan daya melalui konsep, contoh kehidupan sehari-hari, perhitungan, serta latihan interaktif.</p>
+</div>
+</header>
+
+<nav>
+<div class="container">
+<a href="#tujuan">Tujuan</a>
+<a href="#konsep">Konsep</a>
+<a href="#usaha">Usaha</a>
+<a href="#daya">Daya</a>
+<a href="#contoh">Contoh</a>
+<a href="#latihan">Latihan</a>
+<a href="#refleksi">Refleksi</a>
+</div>
+</nav>
+
+<main class="container">
+
+<section id="tujuan">
+<h2>🎯 Tujuan Pembelajaran</h2>
+<div class="grid">
+<div class="card"><h3>Memahami</h3><p>Murid dapat menjelaskan pengertian usaha dan daya serta hubungan gaya, perpindahan, dan waktu.</p></div>
+<div class="card"><h3>Menghitung</h3><p>Murid dapat menggunakan persamaan usaha dan daya dalam persoalan kontekstual.</p></div>
+<div class="card"><h3>Menganalisis</h3><p>Murid dapat membandingkan usaha dan daya pada berbagai situasi kehidupan sehari-hari.</p></div>
+</div>
+</section>
+
+<section id="konsep">
+<h2>💡 Pertanyaan Pemantik</h2>
+<div class="callout yellow">
+<strong>Situasi:</strong> Dua murid mendorong meja dengan gaya yang sama. Murid A berhasil memindahkan meja sejauh 4 m dalam 10 s, sedangkan murid B memindahkannya sejauh 4 m dalam 20 s.
+<br><br>
+<strong>Pikirkan:</strong> Apakah usaha keduanya sama? Siapa yang memiliki daya lebih besar? Mengapa?
+</div>
+
+<h2>Konsep Dasar</h2>
+<div class="grid">
+<div class="card"><h3>Gaya</h3><p>Gaya adalah tarikan atau dorongan yang dapat menyebabkan perubahan gerak atau bentuk benda.</p></div>
+<div class="card"><h3>Perpindahan</h3><p>Perpindahan adalah perubahan posisi benda dari posisi awal ke posisi akhir.</p></div>
+<div class="card"><h3>Usaha</h3><p>Dalam fisika, usaha terjadi ketika gaya menyebabkan benda mengalami perpindahan.</p></div>
+<div class="card"><h3>Daya</h3><p>Daya menyatakan seberapa cepat usaha dilakukan.</p></div>
+</div>
+</section>
+
+<section id="usaha">
+<h2>⚙️ Usaha</h2>
+<div class="callout green">
+<strong>Inti konsep:</strong> Dalam pembelajaran SMP, usaha dapat dipahami sebagai hasil kali gaya yang bekerja searah perpindahan dengan perpindahan benda.
+</div>
+
+<div class="formula">W = F × s</div>
+<table>
+<tr><th>Besaran</th><th>Simbol</th><th>Satuan SI</th></tr>
+<tr><td>Usaha</td><td>W</td><td>joule (J)</td></tr>
+<tr><td>Gaya</td><td>F</td><td>newton (N)</td></tr>
+<tr><td>Perpindahan</td><td>s</td><td>meter (m)</td></tr>
+</table>
+
+<div class="two" style="margin-top:20px">
+<div class="card">
+<h3>Kapan usaha terjadi?</h3>
+<ul>
+<li>Ada gaya yang bekerja pada benda.</li>
+<li>Benda mengalami perpindahan.</li>
+<li>Gaya memiliki komponen yang searah dengan perpindahan.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Kapan usaha nol?</h3>
+<p>Jika tidak terjadi perpindahan, usaha oleh gaya tersebut bernilai nol. Contoh: seseorang mendorong dinding yang tidak bergerak.</p>
+</div>
+</div>
+
+<div class="callout">
+<strong>Catatan penting:</strong> Benda dapat saja bergerak tanpa gaya resultan yang bekerja padanya, misalnya bergerak lurus dengan kecepatan konstan. Namun, usaha oleh gaya tertentu tetap ditentukan oleh gaya dan perpindahan yang terkait dengan gaya tersebut.
+</div>
+</section>
+
+<section id="daya">
+<h2>⚡ Daya</h2>
+<p>Daya menunjukkan <strong>seberapa cepat usaha dilakukan</strong>. Dua kegiatan dapat menghasilkan usaha yang sama, tetapi memiliki daya berbeda jika waktu yang digunakan berbeda.</p>
+<div class="formula">P = W ÷ t</div>
+<table>
+<tr><th>Besaran</th><th>Simbol</th><th>Satuan SI</th></tr>
+<tr><td>Daya</td><td>P</td><td>watt (W)</td></tr>
+<tr><td>Usaha</td><td>W</td><td>joule (J)</td></tr>
+<tr><td>Waktu</td><td>t</td><td>sekon (s)</td></tr>
+</table>
+
+<div class="callout yellow">
+<strong>Ingat:</strong> Daya besar tidak selalu berarti usaha yang dilakukan lebih besar. Daya dapat besar karena usaha yang sama dilakukan dalam waktu yang lebih singkat.
+</div>
+</section>
+
+<section id="contoh">
+<h2>🧮 Contoh Soal</h2>
+
+<div class="example">
+<strong>Contoh 1 — Usaha</strong>
+<p>Sebuah kotak didorong dengan gaya 50 N hingga berpindah 6 m. Berapa usaha yang dilakukan?</p>
+<p><strong>Jawab:</strong> W = F × s = 50 × 6 = <strong>300 J</strong>.</p>
+</div>
+
+<div class="example">
+<strong>Contoh 2 — Daya</strong>
+<p>Seorang murid melakukan usaha sebesar 600 J dalam waktu 10 s. Berapa dayanya?</p>
+<p><strong>Jawab:</strong> P = W ÷ t = 600 ÷ 10 = <strong>60 W</strong>.</p>
+</div>
+
+<div class="example">
+<strong>Contoh 3 — Membandingkan daya</strong>
+<p>Dua murid melakukan usaha yang sama, yaitu 800 J. Murid A memerlukan 8 s, sedangkan murid B memerlukan 16 s.</p>
+<p>P<sub>A</sub> = 800 ÷ 8 = <strong>100 W</strong></p>
+<p>P<sub>B</sub> = 800 ÷ 16 = <strong>50 W</strong></p>
+<p>Jadi, murid A memiliki daya lebih besar karena menyelesaikan usaha yang sama dalam waktu lebih singkat.</p>
+</div>
+
+<div class="card">
+<h3>🔎 Analisis Cepat</h3>
+<p>Jika gaya diperbesar sementara perpindahan tetap, bagaimana perubahan usaha?</p>
+<p>Jika usaha tetap tetapi waktu diperkecil, bagaimana perubahan daya?</p>
+</div>
+</section>
+
+<section id="latihan">
+<h2>✏️ Latihan Interaktif</h2>
+
+<div class="card quiz">
+<span class="badge">Soal 1</span>
+<p>Sebuah benda didorong dengan gaya 40 N sejauh 5 m searah gaya. Besar usaha adalah ...</p>
+<button class="option" onclick="check(this,false)">45 J</button>
+<button class="option" onclick="check(this,false)">80 J</button>
+<button class="option" onclick="check(this,true)">200 J</button>
+<button class="option" onclick="check(this,false)">400 J</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card quiz">
+<span class="badge">Soal 2</span>
+<p>Usaha sebesar 900 J dilakukan dalam waktu 15 s. Daya yang dihasilkan adalah ...</p>
+<button class="option" onclick="check(this,false)">15 W</button>
+<button class="option" onclick="check(this,true)">60 W</button>
+<button class="option" onclick="check(this,false)">75 W</button>
+<button class="option" onclick="check(this,false)">135 W</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card quiz">
+<span class="badge">Soal 3</span>
+<p>Seseorang mendorong tembok dengan kuat, tetapi tembok tidak berpindah. Berdasarkan konsep usaha dalam fisika, usaha pada tembok adalah ...</p>
+<button class="option" onclick="check(this,true)">0 J</button>
+<button class="option" onclick="check(this,false)">Tidak dapat ditentukan</button>
+<button class="option" onclick="check(this,false)">Sangat besar</button>
+<button class="option" onclick="check(this,false)">Selalu 1 J</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card quiz">
+<span class="badge">Soal 4</span>
+<p>Dua orang melakukan usaha 600 J. Orang A menyelesaikannya dalam 10 s dan orang B dalam 20 s. Siapa yang memiliki daya lebih besar?</p>
+<button class="option" onclick="check(this,true)">Orang A</button>
+<button class="option" onclick="check(this,false)">Orang B</button>
+<button class="option" onclick="check(this,false)">Keduanya sama</button>
+<button class="option" onclick="check(this,false)">Tidak bisa dibandingkan</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card quiz">
+<span class="badge">Tantangan Numerasi</span>
+<p>Sebuah mesin memiliki daya 500 W dan bekerja selama 20 s. Berapa usaha yang dilakukan?</p>
+<input id="jawaban" type="number" placeholder="J">
+<button onclick="cekNumerik()">Periksa</button>
+<div id="hasilNumerik" class="feedback"></div>
+</div>
+</section>
+
+<section id="refleksi">
+<h2>🪞 Refleksi</h2>
+<ol class="steps">
+<li>Saya dapat menjelaskan perbedaan usaha dan daya.</li>
+<li>Saya dapat menggunakan rumus W = F × s.</li>
+<li>Saya dapat menggunakan rumus P = W ÷ t.</li>
+<li>Saya dapat menjelaskan mengapa usaha yang sama dapat memiliki daya berbeda.</li>
+</ol>
+
+<div class="callout green">
+<strong>Kesimpulan:</strong> Usaha berkaitan dengan gaya dan perpindahan, sedangkan daya berkaitan dengan usaha dan waktu. Usaha diukur dalam joule (J), sementara daya diukur dalam watt (W).
+</div>
+</section>
+
+</main>
+
+<footer>
+<p><strong>Materi IPA Kelas 8 — Usaha dan Daya</strong></p>
+<p class="small">Dapat digunakan sebagai media belajar mandiri, presentasi di kelas, atau bahan pengayaan.</p>
+</footer>
+
+<script>
+function check(btn, correct){
+  const box=btn.parentElement;
+  box.querySelectorAll('.option').forEach(b=>b.disabled=true);
+  const feedback=box.querySelector('.feedback');
+  if(correct){
+    btn.classList.add('correct');
+    feedback.textContent='✓ Benar! Jawabanmu tepat.';
+    feedback.style.color='#15803d';
+  }else{
+    btn.classList.add('wrong');
+    feedback.textContent='✗ Belum tepat. Coba perhatikan kembali konsep dan rumusnya.';
+    feedback.style.color='#dc2626';
+    box.querySelectorAll('.option').forEach(b=>{
+      if(b.getAttribute('onclick')?.includes('true')) b.classList.add('correct');
+    });
+  }
+}
+function cekNumerik(){
+  const value=Number(document.getElementById('jawaban').value);
+  const hasil=document.getElementById('hasilNumerik');
+  if(value===10000){
+    hasil.textContent='✓ Benar! W = P × t = 500 × 20 = 10.000 J.';
+    hasil.style.color='#15803d';
+  }else{
+    hasil.textContent='✗ Coba lagi. Gunakan hubungan P = W ÷ t, sehingga W = P × t.';
+    hasil.style.color='#dc2626';
+  }
+}
+</script>
+</body>
+</html>
